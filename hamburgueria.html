@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Brasa &amp; Vinho Hamburgueria</title>
+<style>
+:root{
+  --bege:#f3e6cc; --bege-escuro:#e8d3a8; --amarelo:#f2b91d; --vinho:#6b1426; --vinho-escuro:#4a0d1a; --texto:#2e1a1a;
+  box-sizing:border-box; padding-top:env(safe-area-inset-top,0px); padding-bottom:env(safe-area-inset-bottom,0px);
+}
+html{scroll-behavior:smooth; scroll-padding-top:calc(76px + env(safe-area-inset-top,0px));}
+*,*::before,*::after{box-sizing:inherit}
+body{margin:0; background:var(--bege); color:var(--texto); font-family:"Trebuchet MS",Verdana,sans-serif; line-height:1.6}
+h1,h2,h3{font-family:Georgia,"Times New Roman",serif; margin:0}
+header{position:sticky; top:env(safe-area-inset-top,0px); z-index:10; background:var(--vinho); border-bottom:4px solid var(--amarelo)}
+.barra{max-width:1000px; margin:auto; padding:12px 20px; display:flex; flex-wrap:wrap; align-items:center; justify-content:space-between; gap:10px}
+.logo{color:var(--amarelo); font-family:Georgia,serif; font-size:1.4rem; font-weight:bold}
+nav{display:flex; gap:8px; flex-wrap:wrap}
+nav a{color:var(--bege); text-decoration:none; padding:8px 16px; border-radius:30px; font-weight:bold; transition:background .2s,color .2s}
+nav a:hover,nav a:focus-visible{background:var(--amarelo); color:var(--vinho-escuro); outline:none}
+.hero{background:var(--vinho); color:var(--bege); text-align:center; padding:70px 20px 80px}
+.hero h1{font-size:clamp(2.2rem,7vw,4rem); color:var(--amarelo); line-height:1.1}
+.hero p{max-width:520px; margin:18px auto 0; font-size:1.1rem}
+.hero .selo{display:inline-block; margin-top:26px; border:2px dashed var(--amarelo); padding:8px 20px; border-radius:40px}
+section.porcao{padding:64px 20px}
+section.porcao:nth-of-type(even){background:var(--bege-escuro)}
+.conteudo{max-width:1000px; margin:auto}
+.titulo{display:flex; align-items:baseline; gap:14px; flex-wrap:wrap; border-bottom:3px solid var(--vinho); padding-bottom:10px; margin-bottom:32px}
+.titulo h2{color:var(--vinho); font-size:clamp(1.8rem,5vw,2.6rem)}
+.titulo span{color:var(--vinho-escuro)}
+.grade{display:grid; grid-template-columns:repeat(auto-fit,minmax(250px,1fr)); gap:24px}
+.lanche{background:#fff8e6; border:2px solid var(--vinho); border-radius:18px; padding:26px; display:flex; flex-direction:column; gap:10px}
+.lanche .emoji{font-size:3rem}
+.lanche h3{color:var(--vinho); font-size:1.4rem}
+.lanche p{margin:0; flex:1}
+.preco{align-self:flex-start; background:var(--amarelo); color:var(--vinho-escuro); font-weight:bold; padding:6px 16px; border-radius:30px}
+footer{background:var(--vinho-escuro); color:var(--bege); text-align:center; padding:30px 20px; border-top:4px solid var(--amarelo)}
+footer strong{color:var(--amarelo)}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+</style>
+</head>
+<body>
+<header>
+  <div class="barra">
+    <div class="logo">🍔 Brasa &amp; Vinho</div>
+    <nav aria-label="Menu principal">
+      <a href="#pequenas">Porções pequenas</a>
+      <a href="#medias">Porções médias</a>
+      <a href="#grandes">Porções grandes</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <div class="hero">
+    <h1>Hambúrguer artesanal, feito na brasa</h1>
+    <p>Pão macio, carne suculenta e molho da casa. Escolha o tamanho da sua fome no menu acima.</p>
+    <div class="selo">Aberto todos os dias, das 18h às 23h30</div>
+  </div>
+
+  <section class="porcao" id="pequenas">
+    <div class="conteudo">
+      <div class="titulo"><h2>Porções pequenas</h2><span>Ideais para uma pessoa</span></div>
+      <div class="grade">
+        <article class="lanche"><div class="emoji">🍔</div><h3>Mini Clássico</h3><p>Hambúrguer de 90g, queijo prato, alface, tomate e maionese da casa.</p><span class="preco">R$ 16,00</span></article>
+        <article class="lanche"><div class="emoji">🧀</div><h3>Mini Cheddar</h3><p>Carne de 90g, cheddar cremoso e cebola caramelizada no pão brioche.</p><span class="preco">R$ 18,00</span></article>
+        <article class="lanche"><div class="emoji">🥓</div><h3>Mini Bacon</h3><p>Carne de 90g, fatias crocantes de bacon e molho barbecue.</p><span class="preco">R$ 19,00</span></article>
+      </div>
+    </div>
+  </section>
+
+  <section class="porcao" id="medias">
+    <div class="conteudo">
+      <div class="titulo"><h2>Porções médias</h2><span>Para quem está com fome de verdade</span></div>
+      <div class="grade">
+        <article class="lanche"><div class="emoji">🍔</div><h3>Brasa Tradicional</h3><p>Hambúrguer de 160g, queijo prato, alface, tomate, picles e molho especial.</p><span class="preco">R$ 28,00</span></article>
+        <article class="lanche"><div class="emoji">🍳</div><h3>Burger com Ovo</h3><p>Carne de 160g, ovo na chapa, queijo, bacon e cebola roxa.</p><span class="preco">R$ 32,00</span></article>
+        <article class="lanche"><div class="emoji">🍷</div><h3>Vinho Burger</h3><p>Carne de 160g, cebola caramelizada no vinho tinto e queijo gorgonzola.</p><span class="preco">R$ 35,00</span></article>
+      </div>
+    </div>
+  </section>
+
+  <section class="porcao" id="grandes">
+    <div class="conteudo">
+      <div class="titulo"><h2>Porções grandes</h2><span>Para dividir ou encarar sozinho</span></div>
+      <div class="grade">
+        <article class="lanche"><div class="emoji">🍔</div><h3>Duplo Brasa</h3><p>Dois hambúrgueres de 180g, queijo cheddar duplo, bacon e molho da casa.</p><span class="preco">R$ 46,00</span></article>
+        <article class="lanche"><div class="emoji">🔥</div><h3>Monstro Amarelo</h3><p>Dois hambúrgueres de 180g, ovo, onion rings, cheddar e molho de mostarda e mel.</p><span class="preco">R$ 54,00</span></article>
+        <article class="lanche"><div class="emoji">👑</div><h3>Rei da Casa</h3><p>Três carnes de 150g, queijo, bacon, calabresa e cebola crispy. Acompanha batata rústica.</p><span class="preco">R$ 62,00</span></article>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <p><strong>Brasa &amp; Vinho Hamburgueria</strong></p>
+  <p>Rua dos Sabores, 123 · São Paulo · (11) 99999-0000</p>
+</footer>
+</body>
+</html>
